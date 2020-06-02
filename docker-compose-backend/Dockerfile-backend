@@ -1,0 +1,3 @@
+From openjdk:8-jdk-alpine
+copy ./target/microservicios-backend-retoibm-1.0.0-SNAPSHOT.jar
+CMD ["java","-jar","microservicios-backend-retoibm-1.0.0-SNAPSHOT.jar"]

@@ -1,0 +1,21 @@
+version: "3"
+services:
+  suma-jdbc:
+    image: suma-jdbc
+    ports:
+      - "8080:8080"
+    networks:
+      - suma-postgres
+    depends_on:
+      - postgresdb
+ 
+  postgresdb:
+    image: postgres:v1.0
+    networks:
+      - employee-postgres
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres  
+
+networks:
+  employee-postgres: 
